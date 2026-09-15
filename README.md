@@ -1,2 +1,0 @@
-# SINAT
-Proyecto portal web

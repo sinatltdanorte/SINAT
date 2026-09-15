@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINAT - El Futuro de la Seguridad Privada & Tecnología Hikvision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #DDA835;
+            --primary-gold-hover: #c4932b;
+            --gold-gradient: linear-gradient(135deg, #FFF2A6 0%, #DDA835 50%, #8C620D 100%);
+            --hik-red: #D71921;
+            --hik-dark: #1F252E;
+            --text-dark: #1E232A;
+            --text-muted: #5A6472;
+            --bg-light-blue: #EBF1F6;
+            --bg-white: #FFFFFF;
+            --card-border: #E2E8F0;
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light-blue);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .page-container {
+            width: 100%;
+            max-width: 1280px;
+            background-color: var(--bg-white);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- NAVBAR CON BOTONES APILADOS A LA DERECHA --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: var(--bg-light-blue);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            gap: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+            flex-wrap: wrap;
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 13px;
+            transition: color var(--transition-speed);
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Contenedor en esquina derecha uno encima de otro */
+        .nav-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+            flex-shrink: 0;
+            margin-left: auto;
+        }
+
+        /* --- BOTONES DE PORTALES --- */
+        .btn-portal {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #1E232A 0%, #11151C 100%);
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            text-decoration: none;
+            border: 1px solid rgba(221, 168, 53, 0.4);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+            transition: all var(--transition-speed) ease;
+            white-space: nowrap;
+            width: 150px; /* Ancho fijo para uniformidad */
+        }
+
+        .btn-portal i {
+            font-size: 12px;
+            color: var(--primary-gold);
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .btn-portal:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 5px 15px rgba(221, 168, 53, 0.25);
+            color: #FFFFFF;
+        }
+
+        .btn-portal:hover i {
+            transform: scale(1.15);
+        }
+
+        .btn-portal-guardas {
+            background: linear-gradient(135deg, #2D3748 0%, #1A202C 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-portal-guardas i {
+            color: #E2E8F0;
+        }
+
+        .btn-portal-guardas:hover {
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 5px 15px rgba(45, 55, 72, 0.35);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.82) 100%), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+            padding: 80px 50px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 480px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            background: var(--gold-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            font-size: 17px;
+            color: #E2E8F0;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: #1E232A;
+            padding: 14px 28px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 800;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform var(--transition-speed);
+            box-shadow: 0 4px 15px rgba(221, 168, 53, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            border: 1.5px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(5px);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all var(--transition-speed);
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--text-dark);
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            max-width: 600px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 14px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            flex: 1;
+        }
+
+        .stat-info h4 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .stat-info p {
+            font-size: 11px;
+            color: #CBD5E1;
+            font-weight: 600;
+        }
+
+        /* --- BANNER HIKVISION --- */
+        .alliance-banner {
+            background: linear-gradient(135deg, #11151C 0%, #1F252E 100%);
+            color: white;
+            padding: 35px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 3px solid var(--hik-red);
+            gap: 30px;
+        }
+
+        .alliance-content {
+            max-width: 650px;
+        }
+
+        .alliance-tag {
+            display: inline-block;
+            background: rgba(215,25,33,0.2);
+            color: #FF525A;
+            border: 1px solid rgba(215,25,33,0.4);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .alliance-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .alliance-desc {
+            font-size: 13px;
+            color: #A0AEC0;
+            line-height: 1.5;
+        }
+
+        .hik-brand-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .hik-logo-text {
+            font-size: 32px;
+            font-weight: 900;
+            color: #FFFFFF;
+        }
+
+        .hik-logo-text span {
+            color: var(--hik-red);
+        }
+
+        .hik-badge {
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+        }
+
+        /* --- SERVICIOS --- */
+        .services-section {
+            padding: 60px 50px;
+            text-align: center;
+            background: var(--bg-white);
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 35px 20px 25px 20px;
+            text-align: center;
+            background: white;
+            transition: all var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: var(--primary-gold);
+        }
+
+        .service-icon-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1E232A 0%, #2D3748 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(30, 35, 42, 0.25);
+            border: 2px solid rgba(221, 168, 53, 0.4);
+        }
+
+        .service-icon-box i {
+            font-size: 28px;
+            background: var(--gold-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .service-card h3 {
+            font-size: 16px;
+            font-weight: 800;
+            margin-top: 10px;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* --- CONTROL DE ACCESO --- */
+        .hik-tech-section {
+            padding: 60px 50px;
+            background: #F8FAFC;
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .hik-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .hik-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hik-card-img {
+            height: 200px;
+            width: 100%;
+            background: #0F172A;
+        }
+
+        .hik-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hik-card-body {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .hik-card-tag {
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--hik-red);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .hik-card h4 {
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .hik-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .hik-features {
+            list-style: none;
+            margin-top: auto;
+            border-top: 1px dashed var(--card-border);
+            padding-top: 12px;
+        }
+
+        .hik-features li {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 5px;
+        }
+
+        .hik-features li i {
+            color: var(--hik-red);
+            font-size: 10px;
+        }
+
+        /* --- CERTIFICACIONES --- */
+        .certifications-section {
+            padding: 60px 50px;
+            background: #FFFFFF;
+            text-align: center;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .cert-card {
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px 20px;
+            background: #F8FAFC;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cert-badge-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1E232A 0%, #0F172A 100%);
+            border: 2px solid var(--primary-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: var(--primary-gold);
+            font-size: 24px;
+        }
+
+        .cert-card h3 {
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .cert-card .cert-sub {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--primary-gold-hover);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .cert-card p {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .supervigilancia-bar {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #1E232A 0%, #11151C 100%);
+            border-radius: 16px;
+            padding: 25px 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            border-left: 5px solid var(--primary-gold);
+            gap: 20px;
+        }
+
+        .supervigilancia-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .supervigilancia-info i {
+            font-size: 36px;
+            color: var(--primary-gold);
+        }
+
+        .supervigilancia-text h4 {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .supervigilancia-text p {
+            font-size: 12px;
+            color: #CBD5E1;
+        }
+
+        .supervigilancia-badge-status {
+            background: rgba(221, 168, 53, 0.15);
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        /* --- TRABAJA CON NOSOTROS --- */
+        .careers-section {
+            padding: 60px 50px;
+            background: linear-gradient(135deg, #1E232A 0%, #2D3748 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .careers-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .careers-badge {
+            display: inline-block;
+            background: rgba(221, 168, 53, 0.2);
+            color: var(--primary-gold);
+            border: 1px solid var(--primary-gold);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .careers-title {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .careers-desc {
+            font-size: 15px;
+            color: #E2E8F0;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn-careers {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold-gradient);
+            color: #1E232A;
+            padding: 15px 32px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 14px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(221, 168, 53, 0.3);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--bg-light-blue);
+            padding: 40px 50px 20px 50px;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.5fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h5 {
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .footer-col ul a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .footer-col p {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #DDE5ED;
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        /* RESPONSIVE LAYOUT */
+        @media (max-width: 992px) {
+            nav {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                order: 3;
+                width: 100%;
+                margin-left: 0;
+                justify-content: center;
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .services-grid, .hik-grid, .cert-grid { grid-template-columns: 1fr; }
+            .alliance-banner { flex-direction: column; text-align: center; }
+            .hik-brand-box { align-items: center; }
+            .supervigilancia-bar { flex-direction: column; text-align: center; }
+            .supervigilancia-info { flex-direction: column; text-align: center; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 40px 20px; text-align: center; }
+            .hero-title { font-size: 30px; }
+            .hero-buttons { justify-content: center; }
+            .stats-bar { flex-direction: column; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+
+        <!-- NAVBAR REORGANIZADO -->
+        <nav>
+            <a href="#" class="logo-container">
+                <img src="images/Logo%20princ.png" alt="SINAT Seguridad Privada" class="logo-img">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#hikvision">Tecnología Hikvision</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+                <li><a href="#trabaja-con-nosotros">Trabaja con Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <!-- BOTONES UBICADOS A LA DERECHA (UNO ARRIBA DEL OTRO) -->
+            <div class="nav-actions">
+                <a href="#portal-guardas" class="btn-portal btn-portal-guardas">
+                    <i class="fa-solid fa-user-shield"></i>
+                    Portal Guardas
+                </a>
+                <a href="#portal-clientes" class="btn-portal">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Portal Clientes
+                </a>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    El futuro de la seguridad privada, <span>hoy.</span>
+                </h1>
+                <p class="hero-description">
+                    Integración de vigilancia experta con tecnología biométrica y analítica predictiva de nivel internacional para su empresa o conjunto residencial.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn-primary">Solicitar Cotización Gratis</a>
+                    <a href="#hikvision" class="btn-secondary">Ver Tecnología Hikvision</a>
+                </div>
+
+                <div class="stats-bar">
+                    <div class="stat-card">
+                        <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
+                            <i class="fa-solid fa-shield-check" style="font-size: 16px;"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>+500</h4>
+                            <p>Clientes Protegidos</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
+                            <i class="fa-solid fa-server" style="font-size: 16px;"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>99.9%</h4>
+                            <p>Disponibilidad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER HIKVISION -->
+        <section class="alliance-banner">
+            <div class="alliance-content">
+                <span class="alliance-tag"><i class="fa-solid fa-handshake"></i> Alianza Tecnológica Oficial</span>
+                <h2 class="alliance-title">Respaldados por el Líder Global: Hikvision</h2>
+                <p class="alliance-desc">
+                    Como aliados estratégicos, integramos la infraestructura de hardware y software más potente del mundo en control de acceso, cámaras termográficas y analítica MinMoe AI para garantizar cero brechas de seguridad.
+                </p>
+            </div>
+            <div class="hik-brand-box">
+                <div class="hik-logo-text">HIK<span>VISION</span></div>
+                <div class="hik-badge">Authorized Security Partner</div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS ESPECIALIZADOS -->
+        <section id="servicios" class="services-section">
+            <h2 class="section-title">Nuestros Servicios Especializados</h2>
+            <p class="section-subtitle">Arquitectura de seguridad integral adaptada a su sector</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3>Vigilancia Inteligente</h3>
+                    <p>Monitoreo con IA, cámaras PTZ de alta definición y detección automática de anomalías.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </div>
+                    <h3>Seguridad Electrónica</h3>
+                    <p>Integración de barreras activas, CCTV térmico y paneles de detección de incendios.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3>Guardas Profesionales</h3>
+                    <p>Personal físico rigurosamente seleccionado con supervisión remota continua en campo.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-truck-monster"></i>
+                    </div>
+                    <h3>Respuesta Inmediata</h3>
+                    <p>Unidades móviles de reacción rápida equipadas con rastreo GPS y apoyo táctico.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTROL DE ACCESO -->
+        <section id="hikvision" class="hik-tech-section">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <span style="color: var(--hik-red); font-weight: 800; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;">Ecosistema Tecnológico</span>
+                <h2 class="section-title" style="margin-top: 5px;">Sistemas de Control de Acceso Hikvision</h2>
+                <p class="section-subtitle">Implementamos hardware biométrico de última generación para la validación peatonal y vehicular en tiempo real.</p>
+            </div>
+
+            <div class="hik-grid">
+                <div class="hik-card">
+                    <div class="hik-card-img">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" alt="Terminal Biométrico de Reconocimiento Facial">
+                    </div>
+                    <div class="hik-card-body">
+                        <span class="hik-card-tag">Biometría Facial IA</span>
+                        <h4>Terminal MinMoe Serie Value</h4>
+                        <p>Reconocimiento facial ultra rápido en menos de 0.2 segundos incluso en oscuridad total.</p>
+                        <ul class="hik-features">
+                            <li><i class="fa-solid fa-check"></i> Algoritmo Anti-Spoofing</li>
+                            <li><i class="fa-solid fa-check"></i> Capacidad para 10,000 rostros</li>
+                            <li><i class="fa-solid fa-check"></i> Lectores QR y RFID integrados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hik-card">
+                    <div class="hik-card-img">
+                        <img src="https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?q=80&w=800&auto=format&fit=crop" alt="Cámara Lectora de Placas">
+                    </div>
+                    <div class="hik-card-body">
+                        <span class="hik-card-tag">Acceso Vehicular ANPR</span>
+                        <h4>Cámara Lectora de Placas LPR</h4>
+                        <p>Apertura automatizada de talanqueras mediante la identificación instantánea de matrículas.</p>
+                        <ul class="hik-features">
+                            <li><i class="fa-solid fa-check"></i> 98% efectividad nocturna</li>
+                            <li><i class="fa-solid fa-check"></i> Listas blancas / negras</li>
+                            <li><i class="fa-solid fa-check"></i> Gestión de velocidad</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hik-card">
+                    <div class="hik-card-img">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" alt="Torniquetes Peatonales">
+                    </div>
+                    <div class="hik-card-body">
+                        <span class="hik-card-tag">Paso Peatonal de Alto Flujo</span>
+                        <h4>Barreras Flap & Torniquetes</h4>
+                        <p>Sistemas físicos de acero inoxidable para entradas corporativas y conjuntos residenciales.</p>
+                        <ul class="hik-features">
+                            <li><i class="fa-solid fa-check"></i> Detección de paso no autorizado</li>
+                            <li><i class="fa-solid fa-check"></i> Apertura de emergencia</li>
+                            <li><i class="fa-solid fa-check"></i> Indicadores LED integrados</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICACIONES -->
+        <section id="certificaciones" class="certifications-section">
+            <div style="text-align: center; max-width: 750px; margin: 0 auto;">
+                <span style="color: var(--primary-gold-hover); font-weight: 800; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;">Respaldo Normativo</span>
+                <h2 class="section-title" style="margin-top: 5px;">Certificaciones Internacionales & Aval Oficial</h2>
+                <p class="section-subtitle">Cumplimos rigurosamente con los estándares internacionales de gestión y la reglamentación legal nacional.</p>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-badge-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3>ISO 9001:2015</h3>
+                    <div class="cert-sub">Gestión de la Calidad</div>
+                    <p>Garantía de excelencia operativa y estandarización de procesos en nuestros servicios de seguridad.</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3>ISO 45001:2018</h3>
+                    <div class="cert-sub">Seguridad y Salud en el Trabajo</div>
+                    <p>Compromiso con la prevención de riesgos laborales y protección integral de nuestro personal.</p>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3>Supervigilancia</h3>
+                    <div class="cert-sub">Licencia Oficial</div>
+                    <p>Operación legal autorizada y regulada por la Superintendencia de Vigilancia y Seguridad Privada.</p>
+                </div>
+            </div>
+
+            <div class="supervigilancia-bar">
+                <div class="supervigilancia-info">
+                    <i class="fa-solid fa-shield-cat"></i>
+                    <div class="supervigilancia-text">
+                        <h4>Superintendencia de Vigilancia y Seguridad Privada</h4>
+                        <p>Empresa vigilada y habilitada conforme a la reglamentación para vigilancia fija, móvil y seguridad electrónica.</p>
+                    </div>
+                </div>
+                <div class="supervigilancia-badge-status">
+                    <i class="fa-solid fa-circle-check"></i> Licencia Vigente
+                </div>
+            </div>
+        </section>
+
+        <!-- TRABAJA CON NOSOTROS -->
+        <section id="trabaja-con-nosotros" class="careers-section">
+            <div class="careers-container">
+                <span class="careers-badge"><i class="fa-solid fa-users"></i> Únete al Equipo</span>
+                <h2 class="careers-title">Oportunidades Laborales en SINAT</h2>
+                <p class="careers-desc">
+                    Buscamos el mejor talento humano en vigilancia, supervisión y tecnología de seguridad. Si deseas crecer profesionalmente con nosotros, déjanos tu hoja de vida.
+                </p>
+                <a href="mailto:gestionhumana@sinat.com.co?subject=Postulacion%20Laboral%20-%20Hoja%20de%20Vida" class="btn-careers">
+                    <i class="fa-solid fa-file-arrow-up"></i>
+                    Enviar Hoja de Vida
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="contacto">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#hikvision">Hikvision Tech</a></li>
+                        <li><a href="#certificaciones">Certificaciones</a></li>
+                        <li><a href="#trabaja-con-nosotros">Trabaja con Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Tecnología & Calidad</h5>
+                    <ul>
+                        <li><a href="#hikvision">Control de Acceso</a></li>
+                        <li><a href="#hikvision">Terminales MinMoe</a></li>
+                        <li><a href="#certificaciones">ISO 9001 / ISO 45001</a></li>
+                        <li><a href="#certificaciones">Supervigilancia</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contacto SINAT</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Calle 59 # 47 - 21, Bogotá</p>
+                    <p><i class="fa-solid fa-phone"></i> +57 601 2215899</p>
+                    <p><i class="fa-solid fa-envelope"></i> sinat@seguridadsinat.com.co</p>
+                </div>
+
+                <div class="footer-col">
+                    <img src="images/Logo%20princ.png" alt="SINAT" style="height: 45px; width: auto;">
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2026 SINAT Seguridad Privada. Todos los derechos reservados. | Vigilado Superintendencia de Vigilancia y Seguridad Privada
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
