@@ -31,7 +31,104 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:20px;paddi
 .careers-section{padding:60px 50px;background:linear-gradient(135deg,#1E232A,#2D3748);color:#fff;text-align:center}.careers-badge{display:inline-block;padding:5px 14px;border:1px solid var(--gold);border-radius:20px;color:var(--gold);font-size:11px;font-weight:700}.careers-title{margin:15px 0;font-size:30px}.careers-desc{max-width:800px;margin:0 auto 30px;color:#E2E8F0;line-height:1.6}.btn-careers{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:30px;background:var(--gold);color:var(--dark);font-weight:800;text-decoration:none}
 footer{padding:40px 50px 20px;background:var(--light)}.footer-content{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-bottom:30px}.footer-col h5{margin-bottom:12px}.footer-col p,.footer-col a{color:var(--muted);font-size:12px;line-height:1.6;text-decoration:none}.footer-col ul{display:flex;flex-direction:column;gap:6px;list-style:none}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:20px;border-top:1px solid #DDE5ED}.copyright{color:var(--muted);font-size:11px}
 @media(max-width:900px){nav{flex-wrap:wrap}.nav-links{order:3;width:100%;margin-left:0}.services-grid,.hik-grid,.cert-grid{grid-template-columns:repeat(2,1fr)}.hero{height:500px;min-height:500px;padding:45px 28px}.hero-title{font-size:42px}.footer-content{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){nav{justify-content:center;padding:12px 15px}.logo-img{height:80px}.nav-links{gap:10px}.nav-links a{font-size:11px}.nav-actions{align-items:center;width:100%}.hero{height:560px;min-height:560px;padding:40px 20px;align-items:flex-start}.hero-title{max-width:320px;font-size:32px}.hero-description{max-width:300px;font-size:14px}.hero-buttons{max-width:310px;flex-wrap:wrap;gap:10px}.hero-buttons a{min-width:auto;min-height:44px;padding:11px 14px;font-size:11px}.stats-bar{max-width:300px;flex-direction:column;gap:10px}.services-section,.hik-tech-section,.certifications-section,.careers-section{padding:45px 20px}.services-grid,.hik-grid,.cert-grid,.footer-content{grid-template-columns:1fr}.supervigilancia-bar,.supervigilancia-info,.footer-bottom{flex-direction:column;text-align:center}.supervigilancia-info{align-items:center}footer{padding:35px 20px 20px}}
+@media(max-width:600px){
+  nav{
+    justify-content:center;
+    padding:12px 15px;
+    flex-wrap:wrap;
+  }
+  .logo-img{height:80px}
+  .nav-links{
+    gap:10px;
+    width:100%;
+    margin-left:0;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .nav-links a{font-size:11px}
+  .nav-actions{
+    align-items:center;
+    width:100%;
+  }
+  .hero{
+    height:auto;
+    min-height:0;
+    padding:20px 18px 28px;
+    display:flex;
+    align-items:flex-start;
+    background:#1E232A;
+  }
+  .hero::before{
+    display:block;
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:220px;
+    margin-bottom:18px;
+    background:url('bannerprincipalmejorado.png') center top / contain no-repeat;
+    z-index:0;
+  }
+  .hero::after{
+    display:none;
+  }
+  .hero-content{
+    width:100%;
+    max-width:none;
+    text-align:center;
+  }
+  .hero-title{
+    max-width:none;
+    font-size:clamp(30px,8vw,40px);
+    line-height:1.08;
+  }
+  .hero-description{
+    font-size:14px;
+    line-height:1.6;
+  }
+  .hero-buttons{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    max-width:360px;
+    gap:10px;
+    margin:0 auto 20px;
+  }
+  .hero-buttons a{
+    width:100%;
+    min-width:0;
+  }
+  .stats-bar{
+    display:grid;
+    grid-template-columns:1fr;
+    width:100%;
+    max-width:360px;
+    margin:0 auto;
+    gap:10px;
+  }
+  .services-grid,.hik-grid,.cert-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .services-section,.hik-tech-section,.certifications-section,.careers-section{
+    padding:42px 18px;
+  }
+  .section-title,.careers-title{
+    font-size:clamp(25px,7vw,32px);
+    line-height:1.15;
+  }
+  .section-subtitle,.careers-desc{
+    font-size:13px;
+    line-height:1.6;
+  }
+  footer{
+    padding:34px 18px 18px;
+  }
+  .footer-content{
+    grid-template-columns:1fr;
+    gap:24px;
+    text-align:center;
+  }
+}
 </style>
 </head>
 <body>
