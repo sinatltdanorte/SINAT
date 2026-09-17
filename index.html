@@ -255,53 +255,50 @@
 
 .virtual-assistant-badge {
     position: absolute;
-    right: -42px;
-    top: 30%;
+    right: -18px;
+    top: 28%;
     z-index: 5;
     display: flex;
     align-items: center;
     gap: 7px;
-    width: 145px;
-    min-height: 48px;
+    width: 150px;
+    min-height: 46px;
     padding: 9px 11px;
     background: #FFFFFF;
     color: #1E232A;
-    border: 1px solid rgba(30, 64, 175, 0.18);
-    border-radius: 18px;
-    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.22);
+    border: 1px solid rgba(30, 64, 175, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
     font-size: 10px;
     font-weight: 800;
     line-height: 1.25;
-    white-space: normal;
     text-align: left;
+    white-space: normal;
     animation: assistant-float 3s ease-in-out infinite;
 }
 
-/* Punta de la burbuja dirigida hacia el bot */
-.virtual-assistant-badge::before {
+.virtual-assistant-badge::after {
     content: "";
     position: absolute;
-    left: -10px;
+    left: -8px;
     top: 50%;
-    width: 19px;
-    height: 19px;
+    width: 14px;
+    height: 14px;
     background: #FFFFFF;
-    border-left: 1px solid rgba(30, 64, 175, 0.18);
-    border-bottom: 1px solid rgba(30, 64, 175, 0.18);
+    border-left: 1px solid rgba(30, 64, 175, 0.12);
+    border-bottom: 1px solid rgba(30, 64, 175, 0.12);
     transform: translateY(-50%) rotate(45deg);
-    border-bottom-left-radius: 5px;
+    border-radius: 3px;
 }
 
-/* Punto verde de estado */
 .virtual-assistant-badge .status-dot {
     width: 9px;
     height: 9px;
     flex: 0 0 9px;
     border-radius: 50%;
     background: #22C55E;
-    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.16);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
 }
-
 @keyframes assistant-float {
     0%, 100% {
         transform: translateY(0);
