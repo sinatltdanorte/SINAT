@@ -168,34 +168,31 @@
     align-items: center;
     overflow: hidden;
     color: #FFFFFF;
-    background-color: #D9E1E8;
-    background-image:
+    background:
         linear-gradient(
             90deg,
-            rgba(15, 23, 42, 0.62) 0%,
-            rgba(15, 23, 42, 0.28) 44%,
-            rgba(15, 23, 42, 0.04) 100%
+            rgba(15, 23, 42, 0.68) 0%,
+            rgba(15, 23, 42, 0.38) 44%,
+            rgba(15, 23, 42, 0.08) 100%
         ),
-        url('bannerprincipalmejorado.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+        url('bannerprincipalmejorado.png') center center / cover no-repeat;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 680px;
+    max-width: 620px;
 }
 
 .hero-title {
-    max-width: 480px;
-    font-size: 38px;
+    max-width: 450px;
+    font-size: 52px;
+    line-height: 0.96;
     font-weight: 800;
-    line-height: 1.15;
-    color: #FFFFFF;
+    letter-spacing: -1.7px;
     margin-bottom: 18px;
+    color: #FFFFFF;
 }
 
 .hero-title span {
@@ -206,20 +203,19 @@
 }
 
 .hero-description {
-    max-width: 420px;
-    font-size: 15px;
-    color: #F1F5F9;
-    line-height: 1.5;
-    margin-bottom: 28px;
+    max-width: 500px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.55;
+    margin-bottom: 32px;
     font-weight: 500;
 }
+
 .hero-buttons {
     display: flex;
     align-items: center;
     gap: 12px;
-    width: 100%;
-    max-width: 650px;
-    margin-bottom: 34px;
+    margin-bottom: 28px;
     flex-wrap: nowrap;
 }
 
@@ -229,75 +225,81 @@
     justify-content: center;
     min-height: 48px;
     white-space: nowrap;
+    text-decoration: none;
     flex: 0 0 auto;
 }
-        .btn-primary {
+
+.btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: var(--gold-gradient);
     color: #1E232A;
-    padding: 13px 20px;
-    min-height: 48px;
+    padding: 14px 22px;
     border-radius: 10px;
     border: none;
     font-weight: 800;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
     text-decoration: none;
-    white-space: nowrap;
     transition: transform var(--transition-speed);
     box-shadow: 0 4px 15px rgba(221, 168, 53, 0.3);
 }
-        
-        .btn-secondary {
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.94);
     color: #1E3A5F;
-    padding: 13px 20px;
-    min-height: 48px;
+    padding: 14px 22px;
     border-radius: 10px;
     border: 2px solid #1E3A5F;
     font-weight: 800;
-    font-size: 13px;
+    font-size: 14px;
     text-decoration: none;
-    white-space: nowrap;
     transition: all var(--transition-speed);
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
 }
 
-        .stats-bar {
-            display: flex;
-            gap: 20px;
-            max-width: 600px;
-        }
+.btn-secondary:hover {
+    background: #1E3A5F;
+    color: #FFFFFF;
+}
 
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 14px 20px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            flex: 1;
-        }
+.stats-bar {
+    display: flex;
+    gap: 18px;
+    max-width: 420px;
+}
 
-        .stat-info h4 {
-            font-size: 18px;
-            font-weight: 800;
-            color: #FFFFFF;
-        }
+.stat-card {
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(8px);
+    padding: 14px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+}
 
-        .stat-info p {
-            font-size: 11px;
-            color: #CBD5E1;
-            font-weight: 600;
-        }
+.stat-info h4 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #FFFFFF;
+}
 
+.stat-info p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
         /* --- BANNER HIKVISION --- */
         .alliance-banner {
             background: linear-gradient(135deg, #11151C 0%, #1F252E 100%);
@@ -894,9 +896,8 @@
 <section class="hero">
     <div class="hero-content">
         <h1 class="hero-title">
-    El futuro de la seguridad<br>
-    privada, <span>hoy.</span>
-</h1>
+            El futuro de la seguridad privada, <span>hoy.</span>
+        </h1>
 
         <p class="hero-description">
             Integración de vigilancia experta con tecnología biométrica y analítica predictiva de nivel internacional para su empresa o conjunto residencial.
@@ -929,7 +930,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
         <!-- SERVICIOS ESPECIALIZADOS -->
