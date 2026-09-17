@@ -160,36 +160,28 @@
         }
 
         /* --- HERO SECTION --- */
-/* --- HERO SECTION --- */
 .hero {
     position: relative;
     isolation: isolate;
     background:
-        linear-gradient(rgba(255, 255, 255, 0.88), rgba(226, 232, 240, 0.94)),
-        repeating-linear-gradient(
-            135deg,
-            transparent 0,
-            transparent 38px,
-            rgba(30, 64, 175, 0.08) 39px,
-            transparent 40px
+        linear-gradient(
+            90deg,
+            rgba(241, 245, 249, 0.96) 0%,
+            rgba(241, 245, 249, 0.88) 46%,
+            rgba(241, 245, 249, 0.62) 100%
         ),
-        repeating-linear-gradient(
-            45deg,
-            transparent 0,
-            transparent 75px,
-            rgba(15, 23, 42, 0.06) 76px,
-            transparent 77px
-        );
-    padding: 70px 50px;
+        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop')
+        center/cover no-repeat;
+    padding: 52px 50px;
     color: var(--text-dark);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 540px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    align-items: center;
+    gap: 28px;
+    min-height: 460px;
     overflow: hidden;
 }
 
-/* Elementos geométricos decorativos */
 .hero::before,
 .hero::after {
     content: "";
@@ -199,52 +191,46 @@
 }
 
 .hero::before {
-    width: 420px;
-    height: 420px;
-    right: 8%;
+    width: 300px;
+    height: 300px;
+    right: 9%;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
-    border: 2px solid rgba(30, 64, 175, 0.16);
+    border: 2px solid rgba(30, 64, 175, 0.13);
     box-shadow:
-        0 0 0 24px rgba(30, 64, 175, 0.05),
-        0 0 0 48px rgba(30, 64, 175, 0.035);
+        0 0 0 22px rgba(30, 64, 175, 0.05),
+        0 0 0 44px rgba(30, 64, 175, 0.035);
 }
 
 .hero::after {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     left: 5%;
-    bottom: -80px;
-    border: 2px solid rgba(221, 168, 53, 0.3);
+    bottom: -70px;
+    border: 2px solid rgba(221, 168, 53, 0.25);
     transform: rotate(45deg);
 }
 
 .hero-content {
-    max-width: 750px;
-    z-index: 2;
-}
-
-.hero-title,
-.hero-description,
-.hero-buttons,
-.stats-bar {
+    max-width: 700px;
     position: relative;
     z-index: 2;
 }
 
 .hero-device {
-    position: relative;
-    z-index: 2;
-    width: min(100%, 360px);
-    max-height: 440px;
+    width: 100%;
+    max-width: 280px;
+    max-height: 370px;
     height: auto;
     object-fit: contain;
     object-position: center;
+    justify-self: center;
+    align-self: center;
     display: block;
-    margin: 0 auto;
+    position: relative;
+    z-index: 2;
     image-rendering: auto;
 }
-
         .hero-title span {
             background: var(--gold-gradient);
             background-clip: text;
@@ -286,22 +272,22 @@
         }
 
         .btn-secondary {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 14px 28px;
-            border-radius: 10px;
-            border: 1.5px solid rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(5px);
-            font-weight: 700;
-            font-size: 14px;
-            text-decoration: none;
-            transition: all var(--transition-speed);
-        }
+    background: rgba(255, 255, 255, 0.92);
+    color: #1E3A5F;
+    padding: 14px 28px;
+    border-radius: 10px;
+    border: 2px solid #1E3A5F;
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all var(--transition-speed);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+}
 
-        .btn-secondary:hover {
-            background-color: white;
-            color: var(--text-dark);
-        }
+.btn-secondary:hover {
+    background: #1E3A5F;
+    color: #FFFFFF;
+}
 
         .stats-bar {
             display: flex;
@@ -930,14 +916,26 @@
         </div>
 
         <div class="stats-bar">
-            ...
+    <div class="stat-card">
+        <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
+            <i class="fa-solid fa-shield-check" style="font-size: 16px;"></i>
+        </div>
+        <div class="stat-info">
+            <h4>+500</h4>
+            <p>Clientes Protegidos</p>
         </div>
     </div>
 
-    <img
-        src="botsinat.png"
-        alt="Bot virtual asistente de seguridad SINAT"
-        class="hero-device">
+    <div class="stat-card">
+        <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
+            <i class="fa-solid fa-server" style="font-size: 16px;"></i>
+        </div>
+        <div class="stat-info">
+            <h4>99.9%</h4>
+            <p>Disponibilidad</p>
+        </div>
+    </div>
+</div>
 </section>
 
         <!-- SERVICIOS ESPECIALIZADOS -->
