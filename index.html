@@ -160,22 +160,37 @@
         }
 
         /* --- HERO SECTION --- */
-        .hero {
-            position: relative;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.82) 100%), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
-            padding: 80px 50px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 480px;
-        }
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(30, 41, 59, 0.86) 100%),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    padding: 60px 50px;
+    color: white;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 390px;
+    align-items: center;
+    gap: 35px;
+    min-height: 540px;
+    overflow: hidden;
+}
 
-        .hero-content {
-            max-width: 750px;
-            z-index: 2;
-        }
+.hero-content {
+    max-width: 750px;
+    z-index: 2;
+}
+
+.hero-device {
+    width: 100%;
+    max-width: 390px;
+    max-height: 480px;
+    object-fit: contain;
+    object-position: center;
+    justify-self: center;
+    align-self: center;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+    z-index: 1;
+}
 
         .hero-title {
             font-size: 44px;
@@ -793,29 +808,29 @@
 
         <!-- HERO SECTION -->
         <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    El futuro de la seguridad privada, <span>hoy.</span>
-                </h1>
-                <p class="hero-description">
-                    Integración de vigilancia experta con tecnología biométrica y analítica predictiva de nivel internacional para su empresa o conjunto residencial.
-                </p>
+    <div class="hero-content">
+        <h1 class="hero-title">
+            El futuro de la seguridad privada, <span>hoy.</span>
+        </h1>
+        <p class="hero-description">
+            Integración de vigilancia experta con tecnología biométrica y analítica predictiva de nivel internacional para su empresa o conjunto residencial.
+        </p>
 
-                <div class="hero-buttons">
-                    <a href="#contacto" class="btn-primary">Solicitar Cotización Gratis</a>
-                    <a href="#hikvision" class="btn-secondary">Ver Tecnología Hikvision</a>
-                </div>
+        <div class="hero-buttons">
+            <a href="#contacto" class="btn-primary">Solicitar Cotización Gratis</a>
+            <a href="#hikvision" class="btn-secondary">Ver Tecnología Hikvision</a>
+        </div>
 
-                <div class="stats-bar">
-                    <div class="stat-card">
-                        <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
-                            <i class="fa-solid fa-shield-check" style="font-size: 16px;"></i>
-                        </div>
-                        <div class="stat-info">
-                            <h4>+500</h4>
-                            <p>Clientes Protegidos</p>
-                        </div>
-                    </div>
+        <div class="stats-bar">
+            <!-- aquí conservas tus estadísticas actuales -->
+        </div>
+    </div>
+
+    <img
+        src="captura%20de%20pantalla%202026-09-16%20185202.png"
+        alt="Bot virtual asistente de seguridad SINAT"
+        class="hero-device">
+</section>
 
                     <div class="stat-card">
                         <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
