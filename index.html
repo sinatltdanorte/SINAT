@@ -235,6 +235,14 @@
 .hero-device {
     position: relative;
     z-index: 2;
+    width: min(100%, 360px);
+    max-height: 440px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
+    image-rendering: auto;
 }
 
         .hero-title span {
@@ -912,7 +920,6 @@
         <h1 class="hero-title">
             El futuro de la seguridad privada, <span>hoy.</span>
         </h1>
-
         <p class="hero-description">
             Integración de vigilancia experta con tecnología biométrica y analítica predictiva de nivel internacional para su empresa o conjunto residencial.
         </p>
@@ -923,25 +930,7 @@
         </div>
 
         <div class="stats-bar">
-            <div class="stat-card">
-                <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
-                    <i class="fa-solid fa-shield-check" style="font-size: 16px;"></i>
-                </div>
-                <div class="stat-info">
-                    <h4>+500</h4>
-                    <p>Clientes Protegidos</p>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
-                    <i class="fa-solid fa-server" style="font-size: 16px;"></i>
-                </div>
-                <div class="stat-info">
-                    <h4>99.9%</h4>
-                    <p>Disponibilidad</p>
-                </div>
-            </div>
+            ...
         </div>
     </div>
 
@@ -950,21 +939,6 @@
         alt="Bot virtual asistente de seguridad SINAT"
         class="hero-device">
 </section>
-
-        <!-- BANNER HIKVISION -->
-        <section class="alliance-banner">
-            <div class="alliance-content">
-                <span class="alliance-tag"><i class="fa-solid fa-handshake"></i> Alianza Tecnológica Oficial</span>
-                <h2 class="alliance-title">Respaldados por el Líder Global: Hikvision</h2>
-                <p class="alliance-desc">
-                    Como aliados estratégicos, integramos la infraestructura de hardware y software más potente del mundo en control de acceso, cámaras termográficas y analítica MinMoe AI para garantizar cero brechas de seguridad.
-                </p>
-            </div>
-            <div class="hik-brand-box">
-                <div class="hik-logo-text">HIK<span>VISION</span></div>
-                <div class="hik-badge">Authorized Security Partner</div>
-            </div>
-        </section>
 
         <!-- SERVICIOS ESPECIALIZADOS -->
         <section id="servicios" class="services-section">
