@@ -263,11 +263,11 @@
     gap: 7px;
     width: 145px;
     min-height: 48px;
-    padding: 8px 10px;
-    background: rgba(255, 255, 255, 0.98);
+    padding: 9px 11px;
+    background: #FFFFFF;
     color: #1E232A;
     border: 1px solid rgba(30, 64, 175, 0.18);
-    border-radius: 12px;
+    border-radius: 18px;
     box-shadow: 0 8px 22px rgba(15, 23, 42, 0.22);
     font-size: 10px;
     font-weight: 800;
@@ -277,19 +277,26 @@
     animation: assistant-float 3s ease-in-out infinite;
 }
 
+/* Punta de la burbuja dirigida hacia el bot */
+.virtual-assistant-badge::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 19px;
+    height: 19px;
+    background: #FFFFFF;
+    border-left: 1px solid rgba(30, 64, 175, 0.18);
+    border-bottom: 1px solid rgba(30, 64, 175, 0.18);
+    transform: translateY(-50%) rotate(45deg);
+    border-bottom-left-radius: 5px;
+}
+
+/* Punto verde de estado */
 .virtual-assistant-badge .status-dot {
     width: 9px;
     height: 9px;
     flex: 0 0 9px;
-    border-radius: 50%;
-    background: #22C55E;
-    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.16);
-}
-
-.virtual-assistant-badge .status-dot {
-    width: 9px;
-    height: 9px;
-    flex-shrink: 0;
     border-radius: 50%;
     background: #22C55E;
     box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.16);
@@ -916,9 +923,11 @@
 }
 
 .virtual-assistant-badge {
-    right: -18px;
+    right: -22px;
     top: 28%;
-    padding: 8px 10px;
+    width: 128px;
+    min-height: 44px;
+    padding: 8px 9px;
     font-size: 9px;
 }
         
