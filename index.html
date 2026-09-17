@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SINAT - El Futuro de la Seguridad Privada & Tecnología Hikvision</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -50,7 +50,6 @@
             flex-direction: column;
         }
 
-        /* --- NAVBAR CON BOTONES APILADOS A LA DERECHA --- */
         nav {
             display: flex;
             justify-content: space-between;
@@ -96,7 +95,6 @@
             color: var(--primary-gold);
         }
 
-        /* Contenedor en esquina derecha uno encima de otro */
         .nav-actions {
             display: flex;
             flex-direction: column;
@@ -106,7 +104,6 @@
             margin-left: auto;
         }
 
-        /* --- BOTONES DE PORTALES --- */
         .btn-portal {
             display: inline-flex;
             align-items: center;
@@ -125,7 +122,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
             transition: all var(--transition-speed) ease;
             white-space: nowrap;
-            width: 150px; /* Ancho fijo para uniformidad */
+            width: 150px;
         }
 
         .btn-portal i {
@@ -159,148 +156,168 @@
             box-shadow: 0 5px 15px rgba(45, 55, 72, 0.35);
         }
 
-        /* --- HERO SECTION --- */
-.hero {
-    position: relative;
-    min-height: 507px;
-    padding: 55px 50px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    color: #FFFFFF;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(15, 23, 42, 0.68) 0%,
-            rgba(15, 23, 42, 0.38) 44%,
-            rgba(15, 23, 42, 0.08) 100%
-        ),
-        url('bannerprincipalmejorado.png') center center / cover no-repeat;
-}
+        .hero {
+            position: relative;
+            min-height: 507px;
+            padding: 55px 50px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            color: #FFFFFF;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(15, 23, 42, 0.72) 0%,
+                    rgba(15, 23, 42, 0.42) 42%,
+                    rgba(15, 23, 42, 0.08) 100%
+                ),
+                url('bannerprincipalmejorado.png') center center / cover no-repeat;
+        }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 620px;
-}
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 620px;
+        }
 
-.hero-title {
-    max-width: 450px;
-    font-size: 52px;
-    line-height: 0.96;
-    font-weight: 800;
-    letter-spacing: -1.7px;
-    margin-bottom: 18px;
-    color: #FFFFFF;
-}
+        .hero-title {
+            max-width: 450px;
+            font-size: 52px;
+            line-height: 0.96;
+            font-weight: 800;
+            letter-spacing: -1.7px;
+            margin-bottom: 18px;
+            color: #FFFFFF;
+        }
 
-.hero-title span {
-    background: var(--gold-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        .hero-title span {
+            background: var(--gold-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.hero-description {
-    max-width: 500px;
-    font-size: 17px;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.55;
-    margin-bottom: 32px;
-    font-weight: 500;
-}
+        .hero-description {
+            max-width: 500px;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.55;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
 
-.hero-buttons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-    flex-wrap: nowrap;
-}
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+            flex-wrap: nowrap;
+        }
 
-.hero-buttons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    white-space: nowrap;
-    text-decoration: none;
-    flex: 0 0 auto;
-}
+        .hero-buttons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            white-space: nowrap;
+            text-decoration: none;
+            flex: 0 0 auto;
+        }
 
-.btn-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--gold-gradient);
-    color: #1E232A;
-    padding: 14px 22px;
-    border-radius: 10px;
-    border: none;
-    font-weight: 800;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform var(--transition-speed);
-    box-shadow: 0 4px 15px rgba(221, 168, 53, 0.3);
-}
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gold-gradient);
+            color: #1E232A;
+            padding: 14px 22px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 800;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform var(--transition-speed);
+            box-shadow: 0 4px 15px rgba(221, 168, 53, 0.3);
+        }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-}
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
 
-.btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.94);
-    color: #1E3A5F;
-    padding: 14px 22px;
-    border-radius: 10px;
-    border: 2px solid #1E3A5F;
-    font-weight: 800;
-    font-size: 14px;
-    text-decoration: none;
-    transition: all var(--transition-speed);
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
-}
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.94);
+            color: #1E3A5F;
+            padding: 14px 22px;
+            border-radius: 10px;
+            border: 2px solid #1E3A5F;
+            font-weight: 800;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all var(--transition-speed);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+        }
 
-.btn-secondary:hover {
-    background: #1E3A5F;
-    color: #FFFFFF;
-}
+        .btn-secondary:hover {
+            background: #1E3A5F;
+            color: #FFFFFF;
+        }
 
-.stats-bar {
-    display: flex;
-    gap: 18px;
-    max-width: 420px;
-}
+        .stats-bar {
+            display: flex;
+            gap: 18px;
+            max-width: 420px;
+        }
 
-.stat-card {
-    background: rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(8px);
-    padding: 14px 20px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    flex: 1;
-}
+        .stat-card {
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(8px);
+            padding: 14px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            flex: 1;
+        }
 
-.stat-info h4 {
-    font-size: 18px;
-    font-weight: 800;
-    color: #FFFFFF;
-}
+        .service-icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1E232A 0%, #2D3748 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(30, 35, 42, 0.25);
+            border: 2px solid rgba(221, 168, 53, 0.4);
+            margin-bottom: 0;
+        }
 
-.stat-info p {
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 600;
-}
-        /* --- BANNER HIKVISION --- */
+        .service-icon-box i {
+            font-size: 16px;
+            background: var(--gold-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-info h4 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .stat-info p {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+        }
+
         .alliance-banner {
             background: linear-gradient(135deg, #11151C 0%, #1F252E 100%);
             color: white;
@@ -366,7 +383,6 @@
             text-transform: uppercase;
         }
 
-        /* --- SERVICIOS --- */
         .services-section {
             padding: 60px 50px;
             text-align: center;
@@ -446,7 +462,6 @@
             line-height: 1.5;
         }
 
-        /* --- CONTROL DE ACCESO --- */
         .hik-tech-section {
             padding: 60px 50px;
             background: #F8FAFC;
@@ -478,13 +493,13 @@
         }
 
         .hik-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    background: #0F172A;
-}
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            background: #0F172A;
+        }
 
         .hik-card-body {
             padding: 22px;
@@ -536,7 +551,6 @@
             font-size: 10px;
         }
 
-        /* --- CERTIFICACIONES --- */
         .certifications-section {
             padding: 60px 50px;
             background: #FFFFFF;
@@ -608,22 +622,22 @@
         }
 
         .supervigilancia-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
-}
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
 
-.supervigilancia-logo {
-    width: 60px;
-    height: 60px;
-    padding: 6px;
-    object-fit: contain;
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    border: 2px solid var(--primary-gold);
-    display: block;
-}
+        .supervigilancia-logo {
+            width: 60px;
+            height: 60px;
+            padding: 6px;
+            object-fit: contain;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            border: 2px solid var(--primary-gold);
+            display: block;
+        }
 
         .supervigilancia-text h4 {
             font-size: 15px;
@@ -647,7 +661,6 @@
             white-space: nowrap;
         }
 
-        /* --- TRABAJA CON NOSOTROS --- */
         .careers-section {
             padding: 60px 50px;
             background: linear-gradient(135deg, #1E232A 0%, #2D3748 100%);
@@ -700,7 +713,6 @@
             box-shadow: 0 10px 25px rgba(221, 168, 53, 0.3);
         }
 
-        /* --- FOOTER --- */
         footer {
             background-color: var(--bg-light-blue);
             padding: 40px 50px 20px 50px;
@@ -754,11 +766,11 @@
             font-weight: 600;
         }
 
-        /* RESPONSIVE LAYOUT */
         @media (max-width: 992px) {
             nav {
                 flex-wrap: wrap;
             }
+
             .nav-links {
                 order: 3;
                 width: 100%;
@@ -769,65 +781,95 @@
         }
 
         @media (max-width: 900px) {
-    .hero {
-        min-height: 500px;
-        padding: 45px 28px;
-        background-position: center center;
-        background-size: cover;
-    }
+            .services-grid, .hik-grid, .cert-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .hero-content {
-        max-width: 100%;
-    }
+            .alliance-banner {
+                flex-direction: column;
+                text-align: center;
+            }
 
-    .hero-title {
-        font-size: 42px;
-    }
-}
+            .hik-brand-box {
+                align-items: center;
+            }
 
-@media (max-width: 600px) {
-    .hero {
-        min-height: 500px;
-        padding: 38px 20px;
-        background-position: center center;
-        background-size: cover;
-    }
+            .supervigilancia-bar {
+                flex-direction: column;
+                text-align: center;
+            }
 
-    .hero-title {
-        max-width: 320px;
-        font-size: 30px;
-    }
+            .supervigilancia-info {
+                flex-direction: column;
+                text-align: center;
+            }
 
-    .hero-description {
-        max-width: 290px;
-        font-size: 14px;
-    }
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
 
-    .hero-buttons {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 10px;
-    }
+            .hero {
+                min-height: 500px;
+                padding: 45px 28px;
+                background-position: center center;
+                background-size: cover;
+            }
 
-    .hero-buttons a {
-        font-size: 11px;
-        padding: 11px 14px;
-        min-height: 44px;
-    }
+            .hero-content {
+                max-width: 100%;
+            }
 
-    .stats-bar {
-        flex-direction: column;
-        max-width: 300px;
-    }
-}
+            .hero-title {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 500px;
+                padding: 38px 20px;
+                background-position: center center;
+                background-size: cover;
+            }
+
+            .hero-title {
+                max-width: 320px;
+                font-size: 30px;
+            }
+
+            .hero-description {
+                max-width: 290px;
+                font-size: 14px;
+            }
+
+            .hero-buttons {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+
+            .hero-buttons a {
+                font-size: 11px;
+                padding: 11px 14px;
+                min-height: 44px;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                max-width: 300px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="page-container">
+    <div class="page-container">
 
-    <!-- NAVBAR REORGANIZADO -->
-    <nav>
+        <nav>
             <a href="#" class="logo-container">
                 <img src="Logo%20principal.png" alt="SINAT Seguridad Privada" class="logo-img">
             </a>
@@ -841,7 +883,6 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
 
-            <!-- BOTONES UBICADOS A LA DERECHA (UNO ARRIBA DEL OTRO) -->
             <div class="nav-actions">
                 <a href="#portal-guardas" class="btn-portal btn-portal-guardas">
                     <i class="fa-solid fa-user-shield"></i>
@@ -854,47 +895,45 @@
             </div>
         </nav>
 
-        <!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">
-            El futuro de la seguridad privada, <span>hoy.</span>
-        </h1>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    El futuro de la seguridad privada, <span>hoy.</span>
+                </h1>
 
-        <p class="hero-description">
-            Integración de vigilancia experta con tecnología biométrica y analítica predictiva de nivel internacional para su empresa o conjunto residencial.
-        </p>
+                <p class="hero-description">
+                    Integración de vigilancia experta con tecnología biométrica y analítica predictiva de nivel internacional para su empresa o conjunto residencial.
+                </p>
 
-        <div class="hero-buttons">
-            <a href="#contacto" class="btn-primary">Solicitar Cotización Gratis</a>
-            <a href="#hikvision" class="btn-secondary">Ver Tecnología Hikvision</a>
-        </div>
-
-        <div class="stats-bar">
-            <div class="stat-card">
-                <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
-                    <i class="fa-solid fa-shield-check" style="font-size: 16px;"></i>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn-primary">Solicitar Cotización Gratis</a>
+                    <a href="#hikvision" class="btn-secondary">Ver Tecnología Hikvision</a>
                 </div>
-                <div class="stat-info">
-                    <h4>+500</h4>
-                    <p>Clientes Protegidos</p>
+
+                <div class="stats-bar">
+                    <div class="stat-card">
+                        <div class="service-icon-box">
+                            <i class="fa-solid fa-shield-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>+500</h4>
+                            <p>Clientes Protegidos</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="service-icon-box">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>99.9%</h4>
+                            <p>Disponibilidad</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="stat-card">
-                <div class="service-icon-box" style="width: 40px; height: 40px; margin-bottom: 0;">
-                    <i class="fa-solid fa-server" style="font-size: 16px;"></i>
-                </div>
-                <div class="stat-info">
-                    <h4>99.9%</h4>
-                    <p>Disponibilidad</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-        <!-- SERVICIOS ESPECIALIZADOS -->
         <section id="servicios" class="services-section">
             <h2 class="section-title">Nuestros Servicios Especializados</h2>
             <p class="section-subtitle">Arquitectura de seguridad integral adaptada a su sector</p>
@@ -934,7 +973,6 @@
             </div>
         </section>
 
-        <!-- CONTROL DE ACCESO -->
         <section id="hikvision" class="hik-tech-section">
             <div style="text-align: center; max-width: 700px; margin: 0 auto;">
                 <span style="color: var(--hik-red); font-weight: 800; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;">Ecosistema Tecnológico</span>
@@ -948,161 +986,136 @@
                         <img src="images (1).jfif" alt="Terminal Biométrico de Reconocimiento Facial">
                     </div>
                     <div class="hik-card-body">
-                        <span class="hik-card-tag">Biometría Facial IA</span>
-                        <h4>Terminal MinMoe Serie Value</h4>
-                        <p>Reconocimiento facial ultra rápido en menos de 0.2 segundos incluso en oscuridad total.</p>
+                        <span class="hik-card-tag">Biometría</span>
+                        <h4>Reconocimiento Facial</h4>
+                        <p>Autenticación instantánea con algoritmos anti-spoofing y respuesta en menos de 1 segundo.</p>
                         <ul class="hik-features">
-                            <li><i class="fa-solid fa-check"></i> Algoritmo Anti-Spoofing</li>
-                            <li><i class="fa-solid fa-check"></i> Capacidad para 10,000 rostros</li>
-                            <li><i class="fa-solid fa-check"></i> Lectores QR y RFID integrados</li>
+                            <li><i class="fa-solid fa-check"></i> Liveness detection</li>
+                            <li><i class="fa-solid fa-check"></i> Alta precisión</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="hik-card">
                     <div class="hik-card-img">
-                        <img src="image.png" alt="Cámara Lectora de Placas">
+                        <img src="images.jfif" alt="Control de Acceso Vehicular" style="object-position: center;">
                     </div>
                     <div class="hik-card-body">
-                        <span class="hik-card-tag">Acceso Vehicular ANPR</span>
-                        <h4>Cámara Lectora de Placas LPR</h4>
-                        <p>Apertura automatizada de talanqueras mediante la identificación instantánea de matrículas.</p>
+                        <span class="hik-card-tag">Vehicular</span>
+                        <h4>Control de Acceso Vehicular</h4>
+                        <p>Gestión automatizada de flujo peatonal y automotor con validación remota y alertas inteligentes.</p>
                         <ul class="hik-features">
-                            <li><i class="fa-solid fa-check"></i> 98% efectividad nocturna</li>
-                            <li><i class="fa-solid fa-check"></i> Listas blancas / negras</li>
-                            <li><i class="fa-solid fa-check"></i> Gestión de velocidad</li>
+                            <li><i class="fa-solid fa-check"></i> Barreras automáticas</li>
+                            <li><i class="fa-solid fa-check"></i> Detección de placas</li>
                         </ul>
                     </div>
                 </div>
 
-               <div class="hik-card">
-    <div class="hik-card-img">
-        <img src="images.jfif" alt="Torniquetes Peatonales">
-    </div>
-    <div class="hik-card-body">
-        <span class="hik-card-tag">Paso Peatonal de Alto Flujo</span>
-        <h4>Barreras Flap & Torniquetes</h4>
-        <p>Sistemas físicos de acero inoxidable para entradas corporativas y conjuntos residenciales.</p>
-        <ul class="hik-features">
-            <li><i class="fa-solid fa-check"></i> Detección de paso no autorizado</li>
-            <li><i class="fa-solid fa-check"></i> Apertura de emergencia</li>
-            <li><i class="fa-solid fa-check"></i> Indicadores LED integrados</li>
-        </ul>
-    </div>
-</div>
+                <div class="hik-card">
+                    <div class="hik-card-img">
+                        <img src="supervigilancia.png" alt="Centro de Monitoreo y Supervigilancia">
+                    </div>
+                    <div class="hik-card-body">
+                        <span class="hik-card-tag">Monitoreo</span>
+                        <h4>Centro de Supervigilancia</h4>
+                        <p>Paneles centrales para vigilancia 24/7 con correlación de alarmas y analítica prioritizada.</p>
+                        <ul class="hik-features">
+                            <li><i class="fa-solid fa-check"></i> Alarmas en tiempo real</li>
+                            <li><i class="fa-solid fa-check"></i> Reportes automáticos</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- CERTIFICACIONES -->
         <section id="certificaciones" class="certifications-section">
-            <div style="text-align: center; max-width: 750px; margin: 0 auto;">
-                <span style="color: var(--primary-gold-hover); font-weight: 800; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;">Respaldo Normativo</span>
-                <h2 class="section-title" style="margin-top: 5px;">Certificaciones Internacionales & Aval Oficial</h2>
-                <p class="section-subtitle">Cumplimos rigurosamente con los estándares internacionales de gestión y la reglamentación legal nacional.</p>
-            </div>
+            <h2 class="section-title">Certificaciones y Calidad</h2>
+            <p class="section-subtitle">Cumplimos con estándares internacionales en supervisión, seguridad y operación.</p>
 
             <div class="cert-grid">
                 <div class="cert-card">
-                    <div class="cert-badge-icon">
-                        <i class="fa-solid fa-award"></i>
-                    </div>
-                    <h3>ISO 9001:2015</h3>
-                    <div class="cert-sub">Gestión de la Calidad</div>
-                    <p>Garantía de excelencia operativa y estandarización de procesos en nuestros servicios de seguridad.</p>
+                    <div class="cert-badge-icon"><i class="fa-solid fa-award"></i></div>
+                    <h3>ISO 9001</h3>
+                    <div class="cert-sub">Calidad</div>
+                    <p>Procesos estandarizados para garantizar máxima confiabilidad operativa.</p>
                 </div>
 
                 <div class="cert-card">
-                    <div class="cert-badge-icon">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                    </div>
-                    <h3>ISO 45001:2018</h3>
-                    <div class="cert-sub">Seguridad y Salud en el Trabajo</div>
-                    <p>Compromiso con la prevención de riesgos laborales y protección integral de nuestro personal.</p>
+                    <div class="cert-badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Seguridad</h3>
+                    <div class="cert-sub">Niveles altos</div>
+                    <p>Implementación segura conforme a los protocolos del sector privado y corporativo.</p>
                 </div>
 
                 <div class="cert-card">
-                    <div class="cert-badge-icon">
-                        <i class="fa-solid fa-building-columns"></i>
-                    </div>
-                    <h3>Supervigilancia</h3>
-                    <div class="cert-sub">Licencia Oficial</div>
-                    <p>Operación legal autorizada y regulada por la Superintendencia de Vigilancia y Seguridad Privada.</p>
+                    <div class="cert-badge-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Soporte 24/7</h3>
+                    <div class="cert-sub">Atención</div>
+                    <p>Monitoreo activo y respuesta inmediata para mantener continuidad operativa.</p>
                 </div>
             </div>
 
-           <div class="supervigilancia-bar">
-    <div class="supervigilancia-info">
-        <img src="supervigilancia.png" alt="Superintendencia de Vigilancia y Seguridad Privada" class="supervigilancia-logo">
-        <div class="supervigilancia-text">
-            <h4>Superintendencia de Vigilancia y Seguridad Privada</h4>
-            <p>Empresa vigilada y habilitada conforme a la reglamentación para vigilancia fija, móvil y seguridad electrónica.</p>
-        </div>
-    </div>
-    <div class="supervigilancia-badge-status">
-        <i class="fa-solid fa-circle-check"></i> Licencia Vigente
-    </div>
-</div>
+            <div class="supervigilancia-bar">
+                <div class="supervigilancia-info">
+                    <img src="supervigilancia.png" alt="Supervigilancia SINAT" class="supervigilancia-logo">
+                    <div class="supervigilancia-text">
+                        <h4>Supervigilancia SINAT</h4>
+                        <p>Monitoreo operacional y alerta temprana para activos críticos.</p>
+                    </div>
+                </div>
+                <div class="supervigilancia-badge-status">Activo 24/7</div>
+            </div>
         </section>
 
-        <!-- TRABAJA CON NOSOTROS -->
         <section id="trabaja-con-nosotros" class="careers-section">
             <div class="careers-container">
-                <span class="careers-badge"><i class="fa-solid fa-users"></i> Únete al Equipo</span>
-                <h2 class="careers-title">Oportunidades Laborales en SINAT</h2>
+                <span class="careers-badge">Únete al equipo</span>
+                <h2 class="careers-title">Trabaja con Nosotros</h2>
                 <p class="careers-desc">
-                    Buscamos el mejor talento humano en vigilancia, supervisión y tecnología de seguridad. Si deseas crecer profesionalmente con nosotros, déjanos tu hoja de vida.
+                    Buscamos talento con visión operativa, disciplina y compromiso para fortalecer la seguridad de empresas y comunidades.
                 </p>
-                <a href="mailto:gestionhumana@sinat.com.co?subject=Postulacion%20Laboral%20-%20Hoja%20de%20Vida" class="btn-careers">
-                    <i class="fa-solid fa-file-arrow-up"></i>
-                    Enviar Hoja de Vida
-                </a>
+                <a href="#contacto" class="btn-careers"><i class="fa-solid fa-arrow-right"></i> Quiero formar parte</a>
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer id="contacto">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h5>Enlaces Rápidos</h5>
+                    <h5>SINAT</h5>
+                    <p>Seguridad privada, vigilancia y control de acceso con tecnología de alto rendimiento.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Servicios</h5>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#hikvision">Hikvision Tech</a></li>
-                        <li><a href="#certificaciones">Certificaciones</a></li>
-                        <li><a href="#trabaja-con-nosotros">Trabaja con Nosotros</a></li>
+                        <li><a href="#servicios">Vigilancia inteligente</a></li>
+                        <li><a href="#servicios">Guardas profesionales</a></li>
+                        <li><a href="#hikvision">Control de acceso</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h5>Tecnología & Calidad</h5>
+                    <h5>Contacto</h5>
+                    <p>Atención a empresas y conjuntos residenciales.</p>
+                    <p>contacto@sinat.com.mx</p>
+                    <p>+52 (55) 0000-0000</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Legal</h5>
                     <ul>
-                        <li><a href="#hikvision">Control de Acceso</a></li>
-                        <li><a href="#hikvision">Terminales MinMoe</a></li>
-                        <li><a href="#certificaciones">ISO 9001 / ISO 45001</a></li>
-                        <li><a href="#certificaciones">Supervigilancia</a></li>
+                        <li><a href="#">Aviso de privacidad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política</a></li>
                     </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5>Contacto SINAT</h5>
-                    <p><i class="fa-solid fa-location-dot"></i> Calle 59 # 47 - 21, Bogotá</p>
-                    <p><i class="fa-solid fa-phone"></i> +57 601 2215899</p>
-                    <p><i class="fa-solid fa-envelope"></i> sinat@seguridadsinat.com.co</p>
-                </div>
-
-                <div class="footer-col">
-                    <img src="Logo%20principal.png" alt="SINAT" style="height: 120px; width: auto;">
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <div class="copyright">
-                    © 2026 SINAT Seguridad Privada. Todos los derechos reservados. | Vigilado Superintendencia de Vigilancia y Seguridad Privada
-                </div>
+                <div class="copyright">© 2026 SINAT Seguridad Privada. Todos los derechos reservados.</div>
+                <div class="copyright">Diseñado para un alto estándar de seguridad.</div>
             </div>
         </footer>
-
     </div>
-
 </body>
 </html>
