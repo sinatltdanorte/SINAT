@@ -170,8 +170,8 @@
             rgba(241, 245, 249, 0.88) 46%,
             rgba(241, 245, 249, 0.62) 100%
         ),
-        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop')
-        center/cover no-repeat;
+        url('banner%20principal%20bot.jfif')
+center/cover no-repeat;
     padding: 52px 50px;
     color: var(--text-dark);
     display: grid;
@@ -217,97 +217,6 @@
     z-index: 2;
 }
 
-.hero-device {
-    width: 100%;
-    max-width: 280px;
-    max-height: 370px;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-    justify-self: center;
-    align-self: center;
-    display: block;
-    position: relative;
-    z-index: 2;
-    image-rendering: auto;
-}
-  .hero-device-wrap {
-    position: relative;
-    width: 100%;
-    max-width: 280px;
-    justify-self: center;
-    align-self: center;
-    z-index: 3;
-    overflow: visible;
-}
-
-.hero-device-wrap .hero-device {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 280px;
-    max-height: 370px;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-}
-
-.virtual-assistant-badge {
-    position: absolute;
-    right: -18px;
-    top: 28%;
-    z-index: 5;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    width: 150px;
-    min-height: 46px;
-    padding: 9px 11px;
-    background: #FFFFFF;
-    color: #1E232A;
-    border: 1px solid rgba(30, 64, 175, 0.12);
-    border-radius: 16px;
-    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.15);
-    font-size: 10px;
-    font-weight: 800;
-    line-height: 1.25;
-    text-align: left;
-    white-space: normal;
-    animation: assistant-float 3s ease-in-out infinite;
-}
-
-.virtual-assistant-badge::after {
-    content: "";
-    position: absolute;
-    left: -8px;
-    top: 50%;
-    width: 14px;
-    height: 14px;
-    background: #FFFFFF;
-    border-left: 1px solid rgba(30, 64, 175, 0.12);
-    border-bottom: 1px solid rgba(30, 64, 175, 0.12);
-    transform: translateY(-50%) rotate(45deg);
-    border-radius: 3px;
-}
-
-.virtual-assistant-badge .status-dot {
-    width: 9px;
-    height: 9px;
-    flex: 0 0 9px;
-    border-radius: 50%;
-    background: #22C55E;
-    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
-}
-@keyframes assistant-float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
-}
         .hero-title span {
             background: var(--gold-gradient);
             background-clip: text;
@@ -902,31 +811,7 @@
         margin: 0 auto;
     }
 
-    .hero-device {
-        width: min(100%, 300px);
-        max-height: 390px;
-        margin: 10px auto 0;
-    }
-}
-
-  .hero-device-wrap {
-    max-width: 230px;
-    margin: 10px auto 0;
-}
-
-.hero-device-wrap .hero-device {
-    max-width: 230px;
-    max-height: 320px;
-}
-
-.virtual-assistant-badge {
-    right: -22px;
-    top: 28%;
-    width: 128px;
-    min-height: 44px;
-    padding: 8px 9px;
-    font-size: 9px;
-}
+    
         
         @media (max-width: 600px) {
     .hero {
@@ -1035,17 +920,6 @@
         </div>
     </div>
 
-    <div class="hero-device-wrap">
-    <img
-        src="botsinat.png"
-        alt="Bot virtual asistente de seguridad SINAT"
-        class="hero-device">
-
-    <div class="virtual-assistant-badge">
-        <span class="status-dot"></span>
-        <span>Asistente Virtual Activo 24/7</span>
-    </div>
-</div>
 </section>
 
         <!-- SERVICIOS ESPECIALIZADOS -->
