@@ -231,6 +231,62 @@
     z-index: 2;
     image-rendering: auto;
 }
+  .hero-device-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    justify-self: center;
+    align-self: center;
+    z-index: 2;
+}
+
+.hero-device-wrap .hero-device {
+    width: 100%;
+    max-width: 280px;
+    max-height: 370px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.virtual-assistant-badge {
+    position: absolute;
+    right: -38px;
+    top: 32%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.96);
+    color: #1E232A;
+    border: 1px solid rgba(30, 64, 175, 0.16);
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.18);
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+    animation: assistant-float 3s ease-in-out infinite;
+}
+
+.virtual-assistant-badge .status-dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #22C55E;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.16);
+}
+
+@keyframes assistant-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
         .hero-title span {
             background: var(--gold-gradient);
             background-clip: text;
@@ -832,6 +888,23 @@
     }
 }
 
+  .hero-device-wrap {
+    max-width: 230px;
+    margin: 10px auto 0;
+}
+
+.hero-device-wrap .hero-device {
+    max-width: 230px;
+    max-height: 320px;
+}
+
+.virtual-assistant-badge {
+    right: -18px;
+    top: 28%;
+    padding: 8px 10px;
+    font-size: 9px;
+}
+        
         @media (max-width: 600px) {
     .hero {
         padding: 40px 20px;
@@ -939,10 +1012,17 @@
         </div>
     </div>
 
+    <div class="hero-device-wrap">
     <img
         src="botsinat.png"
         alt="Bot virtual asistente de seguridad SINAT"
         class="hero-device">
+
+    <div class="virtual-assistant-badge">
+        <span class="status-dot"></span>
+        <span>Asistente Virtual Activo 24/7</span>
+    </div>
+</div>
 </section>
 
         <!-- SERVICIOS ESPECIALIZADOS -->
