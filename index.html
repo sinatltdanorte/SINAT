@@ -757,13 +757,29 @@
         }
 
         @media (max-width: 900px) {
-            .services-grid, .hik-grid, .cert-grid { grid-template-columns: 1fr; }
-            .alliance-banner { flex-direction: column; text-align: center; }
-            .hik-brand-box { align-items: center; }
-            .supervigilancia-bar { flex-direction: column; text-align: center; }
-            .supervigilancia-info { flex-direction: column; text-align: center; }
-            .footer-content { grid-template-columns: 1fr 1fr; }
-        }
+    .services-grid, .hik-grid, .cert-grid { grid-template-columns: 1fr; }
+    .alliance-banner { flex-direction: column; text-align: center; }
+    .hik-brand-box { align-items: center; }
+    .supervigilancia-bar { flex-direction: column; text-align: center; }
+    .supervigilancia-info { flex-direction: column; text-align: center; }
+    .footer-content { grid-template-columns: 1fr 1fr; }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 45px 25px;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-device {
+        width: min(100%, 300px);
+        max-height: 390px;
+        margin: 10px auto 0;
+    }
+}
 
         @media (max-width: 600px) {
             .hero { padding: 40px 20px; text-align: center; }
