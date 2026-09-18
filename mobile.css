@@ -67,7 +67,7 @@
     width: 100%;
     height: auto;
     min-height: 0;
-    padding: 18px 16px 0;
+    padding: 18px 16px 30px;
     text-align: center;
   }
 
@@ -75,13 +75,13 @@
     display: block;
     position: relative;
     inset: auto;
-    order: 2;
+    order: 1;
     flex: 0 0 auto;
-    width: calc(100% + 32px);
-    height: 245px;
-    margin: 26px -16px 0;
-    background-position: center bottom;
-    background-size: cover;
+    width: 100%;
+    height: 166px;
+    margin: 0 0 18px;
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
     z-index: 0;
   }
@@ -91,7 +91,7 @@
   }
 
   .hero-content {
-    order: 1;
+    order: 2;
     width: 100%;
     max-width: 390px;
     margin: 0 auto;
@@ -168,9 +168,6 @@
   }
 
   .hero::before {
-    width: calc(100% + 24px);
-    height: 210px;
-    margin-left: -12px;
-    margin-right: -12px;
+    height: 145px;
   }
 }
