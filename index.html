@@ -139,43 +139,54 @@
   min-height: 420px;
   height: clamp(420px, 39.6vw, 520px);
   padding: 55px 50px;
-  background: linear-gradient(
-    90deg,
-    rgba(228, 229, 232, 0.96) 0%,
-    rgba(214, 216, 220, 0.92) 30%,
-    rgba(186, 189, 192, 0.80) 58%,
-    rgba(167, 170, 173, 0.72) 100%
-  );
   overflow: hidden;
+
+  /* Colores similares al fondo de la imagen */
+  background:
+    linear-gradient(
+      90deg,
+      #dfe1e3 0%,
+      #cdd0d3 32%,
+      #b1b5b9 62%,
+      #8d9297 100%
+    );
 }
 
 .hero-image {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 0;
+
+  /* La imagen ocupa más espacio del banner */
+  width: 70%;
   height: 100%;
-  width: auto;
-  max-width: 62%;
+  max-width: none;
+
+  /* Llena completamente su área sin dejar espacios */
   object-fit: cover;
   object-position: right center;
   display: block;
-  opacity: 1;
 }
 
+/* Degradado para que la imagen se mezcle con el fondo */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
   background:
     linear-gradient(
       90deg,
-      rgba(240, 241, 243, 0.96) 0%,
-      rgba(218, 220, 223, 0.76) 28%,
-      rgba(188, 192, 195, 0.32) 58%,
-      rgba(154, 157, 160, 0.08) 100%
-    ),
-    radial-gradient(circle at 72% 34%, rgba(255,255,255,0.2), transparent 26%);
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.04);
+      rgba(223, 225, 227, 1) 0%,
+      rgba(210, 213, 216, 0.96) 23%,
+      rgba(190, 194, 198, 0.75) 42%,
+      rgba(160, 165, 170, 0.32) 62%,
+      rgba(130, 136, 142, 0.04) 82%,
+      rgba(130, 136, 142, 0) 100%
+    );
 }
       .hero-content {
         position: relative;
